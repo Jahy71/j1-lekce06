@@ -76,7 +76,7 @@ public class Osoba {
      * @param email
      */
     private void pridejEmail(String email) {
-        //TODO
+        emaily.add(email);
     }
 
     /**
@@ -86,8 +86,7 @@ public class Osoba {
      * @return
      */
     private boolean obsahujeEmail(String email) {
-        //TODO
-        return false;
+        return emaily.contains(email);
     }
 
     /**
@@ -95,7 +94,7 @@ public class Osoba {
      * @param telefon
      */
     private void pridejTelefon(String telefon) {
-        //TODO
+        telefony.add(telefon);
     }
 
     /**
@@ -103,22 +102,21 @@ public class Osoba {
      * @param telefon
      */
     private void odstranTelefon(String telefon) {
-        //TODO
+        telefony.remove(telefon);
     }
 
     /**
      * Zjistí, zda je seznam telefonů prázdný.
      */
     private boolean jeSeznamTelefonuPrazdny() {
-        //TODO
-        return false;
+        return telefony.isEmpty();
     }
 
     /**
      * Smaže všechny telefony ze seznamu.
      */
     private void smazVsechnyTelefony() {
-        //TODO
+        //telefony.removeAll();
     }
 
     /**
@@ -126,7 +124,7 @@ public class Osoba {
      * @param jmeno Křestní jméno dítěte.
      */
     private void pridejDite(String jmeno) {
-        //TODO
+        deti.add(jmeno);
     }
 
     /**
@@ -135,8 +133,7 @@ public class Osoba {
      * @return
      */
     private boolean jeNaSeznamuDite(String jmeno) {
-        //TODO
-        return false;
+        return deti.contains(jmeno);
     }
 
     /**
@@ -148,8 +145,7 @@ public class Osoba {
      * @return Pořadí dítěte.
      */
     private Integer kolikateJe(String jmeno) {
-        //TODO
-        return 0;
+        return deti.indexOf(jmeno);
     }
 
     /**
