@@ -116,7 +116,7 @@ public class Osoba {
      * Smaže všechny telefony ze seznamu.
      */
     private void smazVsechnyTelefony() {
-        //telefony.removeAll();
+        telefony.clear();
     }
 
     /**
@@ -145,7 +145,11 @@ public class Osoba {
      * @return Pořadí dítěte.
      */
     private Integer kolikateJe(String jmeno) {
-        return deti.indexOf(jmeno);
+        int index = deti.indexOf(jmeno);
+        if (index < 0) {
+            return null;
+        }
+        return index + 1;
     }
 
     /**
@@ -158,6 +162,11 @@ public class Osoba {
         //Pro výpis jednoho dítěte se použije System.out.println()
         //Pro průchod celým seznamem se použije for each cyklus (s dvojtečkou) – po zadání "deti.for" IntelliJ Ieda napoví.
         //Pozor, nejde o metodu forEach()!
+
+        for (String i:
+             deti) {
+            System.out.println(i);
+        }
     }
     //endregion
 
